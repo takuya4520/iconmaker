@@ -1,2 +1,0 @@
-class ChatbotsController < ApplicationController
-end
