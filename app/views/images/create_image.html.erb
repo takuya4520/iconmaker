@@ -1,0 +1,7 @@
+<div class="top">
+  <h2>アイコンを作成しました。</h2>
+  <h2><%=@query%></h2>
+  <%= image_tag @icon_url , :size =>'500x500'%>
+  <%= link_to "。。気に入らないぞ(もう一度)", create_icon_path %>
+  <%= link_to "戻る", images_path %>
+</div>
