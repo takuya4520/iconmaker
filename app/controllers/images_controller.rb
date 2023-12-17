@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+  def top; end
+
   def create_image
     @query = params[:query]
     response = @client.images.generate(

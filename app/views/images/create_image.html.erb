@@ -1,6 +1,14 @@
+<div id="loading">
+  <div id="loading_box">
+    <div class="loading-one animation_loading">
+      <p class="loading-txt">Loading</p>
+    </div>
+  </div>
+</div>
+
 <div class="top">
   <h2>アイコンを作成しました。</h2>
   <h2>キーワード: <%=@query%></h2>
   <%= image_tag @icon_url , :size =>'500x500'%>
-  <%= link_to "戻る", images_path %>
+  <%= link_to "戻る", root_path %>
 </div>

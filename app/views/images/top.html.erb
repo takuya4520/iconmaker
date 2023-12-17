@@ -1,7 +1,7 @@
 <div class="top">
   <h3>アイコンを作成しましょう。</h3>
-  <%= form_with(url: create_icon_path, method: :get) do |form| %>
+  <%= form_with(url: create_icon_path, method: :get, data: {"turbolinks" => false} ) do |form| %>
     <%= form.text_field :query, size: 50 %>
-    <%= form.submit "検索" %>
+    <%= form.submit "作成" %>
   <% end %>
 </div>
