@@ -6,7 +6,7 @@ class ImagesController < ApplicationController
     response = @client.images.generate(
       parameters: { 
         model: "dall-e-3", 
-        prompt: "アニメスタイルの#{@query}の可愛らしい丸形のアイコン"
+        prompt: "アニメスタイルで#{@query}の可愛らしい円形のアイコン"
       }
     )
     @icon_url = response.dig("data", 0, "url")
