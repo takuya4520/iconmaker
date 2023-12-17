@@ -4,6 +4,10 @@ ruby "3.2.2"
 
 gem "ruby-openai"
 
+gem 'bootstrap', '~> 5.0.2'
+#jquery
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
 
