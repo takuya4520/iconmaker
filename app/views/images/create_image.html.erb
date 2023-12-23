@@ -5,9 +5,9 @@
     <%= image_tag @icon_url, class:"img-fluid mx-auto", :size =>'500x500'%>
   </div>
   <div class ="text-center title ">
-  <%= link_to 'Share', "https://twitter.com/share?url=https://iconmaker.onrender.com&text=アイコンを作成しました。
+  <%= link_to 'X Share', "https://twitter.com/share?url=https://iconmaker.onrender.com&text=アイコンを作成しました。
     %0aキーワード: #{@query}
-    %0a#{@icon_url}",
+    #{@icon}",
     title: 'Twitter',class:'fab fa-twitter', target: '_blank' %>
   </div>
   <%= link_to "戻る", root_path , class:"btn btn-light"%>

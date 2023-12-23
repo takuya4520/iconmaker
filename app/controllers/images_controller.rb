@@ -10,5 +10,6 @@ class ImagesController < ApplicationController
       }
     )
     @icon_url = response.dig("data", 0, "url")
+    @icon = ERB::Util.url_encode(@icon_url)
   end
 end
