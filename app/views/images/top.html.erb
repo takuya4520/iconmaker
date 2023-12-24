@@ -1,7 +1,27 @@
-<div class="top mx-5">
-  <h3>アイコンを作成してみよう</h3>
-  <%= form_with(url: create_icon_path, method: :get, data: {"turbolinks" => false} ) do |form| %>
-    <%= form.text_field :query, class: "form-control", placeholder:'例：散歩している黒柴' %>
-    <%= form.submit "作成", class:"m-1 btn btn-dark" %>
-  <% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <%= form_with(url: create_icon_path, method: :get, data: {"turbolinks" => false} ) do |form| %>
+        <div class="mb-3">
+          <%= form.text_field :query, class: "form-control", placeholder: '例：散歩している黒柴' %>
+        </div>
+        <div class="form-check">
+          <%= form.radio_button :style, 'cute', id: 'style_cute', class: 'form-check-input', checked: true %>
+          <%= form.label :style_cute, 'cute', class: 'form-check-label' %>
+        </div>
+
+        <div class="form-check">
+          <%= form.radio_button :style, 'cool', id: 'style_cool', class: 'form-check-input' %>
+          <%= form.label :style_cool, 'cool', class: 'form-check-label' %>
+        </div>
+
+        <div class="text-center">
+          <%= form.submit "作成", class: "btn btn-dark" %>
+        </div>
+      <% end %>
+      <div class="text-center m-2">
+        <p>※著作物の入力はご遠慮お願いいたします</p>
+      </div>
+    </div>
+  </div>
 </div>
