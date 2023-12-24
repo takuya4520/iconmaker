@@ -1,1 +1,6 @@
 @import "bootstrap";
+/* チェックされたラジオボタンのカスタムスタイル */
+.form-check-input:checked {
+  background-color: #000000;
+  border-color: #000000;
+}
