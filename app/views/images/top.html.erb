@@ -5,6 +5,9 @@
         <div class="mb-3">
           <%= form.text_field :query, class: "form-control", placeholder: '例：散歩している黒柴' %>
         </div>
+        <div class="text-center">
+          <p>※著作物の入力はご遠慮お願いいたします。</p>
+        </div>  
         <div class="form-check">
           <%= form.radio_button :style, 'cute', id: 'style_cute', class: 'form-check-input', checked: true %>
           <%= form.label :style_cute, 'cute', class: 'form-check-label' %>
@@ -20,7 +23,7 @@
         </div>
       <% end %>
       <div class="text-center m-2">
-        <p>※著作物の入力はご遠慮お願いいたします</p>
+        <p>生成された画像は30分ほどで有効期限が切れますので注意してください。</p>
       </div>
     </div>
   </div>
