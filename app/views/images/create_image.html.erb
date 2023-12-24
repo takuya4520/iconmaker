@@ -1,6 +1,8 @@
 <div class="top text-center">
   <h2>アイコンを作成しました。</h2>
-  <h2>キーワード: <%=@query%></h2>
+  <div>
+    <p>キーワード: <%=@query%>  テイスト: <%=@style%></p>
+  </div>
   <div>
     <%= image_tag @icon_url, class:"img-fluid mx-auto", :size =>'500x500'%>
   </div>
