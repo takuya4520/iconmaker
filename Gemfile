@@ -4,7 +4,7 @@ ruby "3.2.2"
 
 gem "ruby-openai"
 
-gem 'bootstrap', '~> 5.0.2'
+gem 'bootstrap', '~> 5.3.0.alpha3'
 #jquery
 gem 'jquery-rails'
 

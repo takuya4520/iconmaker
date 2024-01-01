@@ -1,3 +1,4 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light container justify-content-center">
-  <a class="navbar-brand text-dark text-center" href="/">ICON MAKER</a>
+  <%= image_tag asset_path('favicon.png'), size: '30x30', class: "mx-1" %>
+  <%= link_to 'ICON MAKER', root_path, class: 'navbar-brand text-dark text-center', data: { turbo: false } %>
 </nav>
