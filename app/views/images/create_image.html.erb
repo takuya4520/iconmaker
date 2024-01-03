@@ -1,4 +1,14 @@
 <div class="top text-center">
+  <div id="loading">
+    <div class="kvArea" id="loading_box">
+      <div class="img_box text-center">
+        <%= image_tag 'loading.png', alt: '', size: '300x300', class: 'fadeUp', data: { turbo: false } %>
+        <div class="text-center fadeUp">
+          <p>ちょっと待ってね~</p>
+        </div> 
+      </div>
+    </div>
+  </div>
   <h2>アイコンを作成しました。</h2>
   <div>
     <p>キーワード: <%=@query%><br>テイスト: <%=@style%></p>
@@ -15,3 +25,4 @@
   </div>
   <%= link_to "戻る", root_path , class:"btn btn-light", data: { turbo: false } %>
 </div>
+
