@@ -19,6 +19,16 @@
   </head>
 
   <body class="bg-light">
+  <div id="loading">
+    <div class="kvArea" id="loading_box">
+      <div class="img_box text-center">
+        <%= image_tag 'loading.png', alt: '', size: '300x300', class: 'fadeUp' %>
+        <div class="text-center fadeUp">
+          <p>ちょっと待ってね~</p>
+        </div> 
+      </div>
+    </div>
+  </div>
     <header>
     <%= render "shared/header"%>
     </header>

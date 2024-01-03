@@ -4,3 +4,128 @@
   background-color: #000000;
   border-color: #000000;
 }
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: #fff;
+  text-align: center;
+}
+
+#loading_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loading .kvArea {
+  width: 100%;
+}
+
+#loading .kvArea .img_box {
+  text-align: center;
+}
+
+#loading .kvArea .img_box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 1.2s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+/*==================
+base
+==================*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: YuGothic, "游ゴシック体", "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: .025em;
+  line-height: 1.8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.txt {
+  font-size: 16px;
+  text-align: center;
+}
+
+.section {
+  padding: 20px 10px;
+}
+
+._a {
+  max-width: 300px;
+  margin: 30px auto 0;
+}
+
+._a a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2.0em 1.0em;
+  border: 1px solid #222222;
+  background: linear-gradient(to right, #ffffff 50%, #222222 50%);
+  background-size: 200% auto;
+  color: #222222;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  transition: .3s;
+  position: relative;
+}
+
+._a a:after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+}
+
+._a a:hover {
+  color: #ffffff;
+  background-position: -100% 0;
+}

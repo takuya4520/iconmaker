@@ -1,7 +1,7 @@
 <div class="top text-center">
   <h2>アイコンを作成しました。</h2>
   <div>
-    <p>キーワード: <%=@query%>  テイスト: <%=@style%></p>
+    <p>キーワード: <%=@query%><br>テイスト: <%=@style%></p>
   </div>
   <div>
     <%= image_tag @icon_url, class:"img-fluid mx-auto", :size =>'500x500'%>
@@ -11,7 +11,7 @@
     %0aキーワード: #{@query}
     %0aテイスト: #{@style}
     #{@icon}",
-    title: 'Twitter',class:'fab fa-twitter', target: '_blank' %>
+    title: 'Twitter',class:'btn btn-light', target: '_blank' %>
   </div>
-  <%= link_to "戻る", root_path , class:"btn btn-light"%>
+  <%= link_to "戻る", root_path , class:"btn btn-light", data: { turbo: false } %>
 </div>

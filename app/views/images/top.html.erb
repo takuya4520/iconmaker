@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-">
-      <%= form_with(url: create_icon_path, method: :get, data: {"turbolinks" => false} ) do |form| %>
+    <div class="col-md-5">
+      <%= form_with(url: create_icon_path, method: :get, data: { turbo: false } ) do |form| %>
         <div class="mb-3">
           <%= form.text_field :query, class: "form-control", placeholder: '例：散歩している黒柴' %>
         </div>
