@@ -22,7 +22,7 @@
   <div id="loading">
     <div class="kvArea" id="loading_box">
       <div class="img_box text-center">
-        <%= image_tag 'loading.png', alt: '', size: '300x300', class: 'fadeUp' %>
+        <%= image_tag 'loading.png', alt: '', size: '300x300', class: 'fadeUp', data: { turbo: false } %>
         <div class="text-center fadeUp">
           <p>ちょっと待ってね~</p>
         </div> 
@@ -30,7 +30,7 @@
     </div>
   </div>
     <header>
-    <%= render "shared/header"%>
+    <%= render "shared/header", data: { turbo: false }%>
     </header>
     <%= yield %>
   </body>
