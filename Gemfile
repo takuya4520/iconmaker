@@ -4,6 +4,8 @@ ruby "3.2.2"
 
 gem "ruby-openai"
 
+gem 'sorcery'
+
 gem 'bootstrap', '~> 5.0.2'
 #jquery
 gem 'jquery-rails'
