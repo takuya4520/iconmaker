@@ -1,0 +1,5 @@
+<% @posts.each do |post| %>
+  <span>投稿者:</span><%= post.user.name %>
+  キーワード:<%= post.title %>
+  taste:<%= post.taste %>
+<% end %>

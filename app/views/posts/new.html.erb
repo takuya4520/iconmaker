@@ -1,21 +1,21 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-5">
-      <%= form_with(url: create_icon_path, method: :get, data: { turbo: false } ) do |form| %>
+      <%= form_with model: @post, local: true, data: { turbo: false } do |form| %>
         <div class="mb-3">
-          <%= form.text_field :query, class: "form-control", placeholder: '例：散歩している黒柴' %>
+          <%= form.text_field :title, class: "form-control", placeholder: '例：散歩している黒柴' %>
         </div>
         <div class="text-center">
           <p>※著作物の入力はご遠慮お願いいたします。</p>
         </div>  
         <div class="form-check">
-          <%= form.radio_button :style, 'cute', id: 'style_cute', class: 'form-check-input', checked: true %>
-          <%= form.label :style_cute, 'cute', class: 'form-check-label' %>
+          <%= form.radio_button :taste, 'cute', id: 'taste_cute', class: 'form-check-input', checked: true %>
+          <%= form.label :taste_cute, 'cute', class: 'form-check-label' %>
         </div>
 
         <div class="form-check">
-          <%= form.radio_button :style, 'cool', id: 'style_cool', class: 'form-check-input' %>
-          <%= form.label :style_cool, 'cool', class: 'form-check-label' %>
+          <%= form.radio_button :taste, 'cool', id: 'taste_cool', class: 'form-check-input' %>
+          <%= form.label :taste_cool, 'cool', class: 'form-check-label' %>
         </div>
 
         <div class="text-center">
