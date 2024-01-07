@@ -1,4 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light container justify-content-center">
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-body-tertiary">
+<div class="container-fluid">
   <%= image_tag 'favicon.png', size: '30x30', class: "mx-2" %>
   <%= link_to 'ICON MAKER', root_path, class: 'navbar-brand text-dark text-center', data: { turbo: false } %>
+  <button class='navbar-toggler' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto main-nav align-items-center">
+        <li class="nav-item">
+          <%= link_to 'ログイン', login_path, class: 'nav-link' %> 
+          <%= link_to 'ログアウト', logout_path, class: 'dropdown-item', data: { turbo_method: :delete } %>
+        </li>
+      </ul>
+    </div>
 </nav>
