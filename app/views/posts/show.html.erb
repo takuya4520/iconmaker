@@ -1,0 +1,35 @@
+<div class="top text-center">
+  <div id="loading">
+    <div class="kvArea" id="loading_box">
+      <div class="img_box text-center">
+        <%= image_tag 'loading.png', alt: '', size: '300x300', class: 'fadeUp', data: { turbo: false } %>
+        <div class="text-center fadeUp">
+          <p>ちょっと待ってね~</p>
+        </div> 
+      </div>
+    </div>
+  </div>
+<h2><%=@post.user.name%>のアイコン</h2>
+  <div>
+    <p>キーワード: <%=@post.title%><br>テイスト: <%=@post.taste%></p>
+  </div>
+  <div>
+    <% if @post.image.attached? %>
+      <%= image_tag @post.image, class: 'img-fluid mx-auto', size: '500x500' %>
+    <% else %>
+      <%= image_tag "favicon.png", class: 'img-fluid mx-auto', size: '500x500' %>
+    <% end %>
+  </div>
+
+  <div class ="text-center m-2">
+    <% if current_user == @post.user %>
+      <%= link_to "削除", post_path(@post),class: "btn btn-outline-danger mx-3", method: :delete, data: { confirm: '本当に削除しますか？' } %>
+      <%= link_to 'X Share', "https://twitter.com/share?url=https://iconmaker.onrender.com&text=アイコンを作成したよ！
+        %0aキーワード: #{@post.title}
+        %0aテイスト: #{@post.taste}
+        %0a ⭐️ミニアプリweek⭐️",
+        title: 'Twitter',class:'btn btn-light mx-3', target: '_blank' %>
+    <% end %>
+  </div>
+  <%= link_to "戻る", posts_path , class:"btn btn-light m-2", data: { turbo: false } %>
+</div>

@@ -20,7 +20,11 @@
 
   <body class="bg-light">
     <header>
-      <%= render "shared/header", data: { turbo: false }%>
+      <% if logged_in? %>
+        <%= render 'shared/header' %>
+      <% else %>
+        <%= render 'shared/before_login_header' %>
+      <% end %>
     </header>
     <%= yield %>
   </body>
