@@ -23,7 +23,7 @@
 
   <div class ="text-center m-2">
     <% if current_user == @post.user %>
-      <%= link_to "削除", posts_path, class: "btn btn-outline-danger mx-3", method: :delete, data: { confirm: '本当に削除しますか？' } %>
+      <%= link_to "削除", post_path(@post),class: "btn btn-outline-danger mx-3", data: { turbo_method: :delete } %>
       <%= link_to 'X Share', "https://twitter.com/share?url=https://iconmaker.onrender.com&text=アイコンを作成したよ！
         %0aキーワード: #{@post.title}
         %0aテイスト: #{@post.taste}
