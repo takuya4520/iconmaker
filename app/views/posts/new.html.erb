@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-md-5">
       <%= form_with model: @post, local: true, data: { turbo: false } do |form| %>
-        <div class="mb-3">
+        <div class="mb-3 my-5">
           <%= form.text_field :title, class: "form-control", placeholder: '例：散歩している黒柴' %>
         </div>
         <div class="text-center">
@@ -22,10 +22,7 @@
           <%= form.submit "作成", class: "btn btn-dark" %>
         </div>
       <% end %>
-      <div class="text-center m-2">
-        <p>生成された画像は30分ほどで有効期限切れとなります。</p>
-      </div>
-      <div class="swiper">
+      <div class="swiper my-5">
         <div class="swiper-wrapper text-center">
           <div class="swiper-slide">
             <%= image_tag asset_path('favicon.png'), alt: '', size: '300x300' %>
