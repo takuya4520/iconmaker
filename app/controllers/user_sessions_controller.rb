@@ -5,7 +5,7 @@ class UserSessionsController < ApplicationController
   def create
     @user = login(params[:email], params[:password]) #emailとpasswordが一致していれば@userにデータが代入される(loginメソッドで検証を行なっている)
     if @user #訳：loginメソッドで検証が一致して、@userにデータだ代入されたら
-      redirect_back_or_to root_path #ログインしたらroot_path(root toなどで指定したページ)にリダイレクトする。
+      redirect_to root_path #ログインしたらroot_path(root toなどで指定したページ)にリダイレクトする。
     else
       render :new #ログイン出来なかったら、ログインページ（'user_sessions#new'）にリダイレクトされる
     end
