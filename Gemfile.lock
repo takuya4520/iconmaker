@@ -206,6 +206,7 @@ GEM
       rack (>= 1.2, < 4)
       snaky_hash (~> 2.0)
       version_gem (~> 1.1)
+    pg (1.5.4)
     popper_js (2.11.8)
     psych (5.1.2)
       stringio
@@ -337,6 +338,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mini_magick
+  pg (~> 1.4)
   puma (>= 5.0)
   rails (~> 7.1.2)
   ruby-openai
