@@ -1,0 +1,33 @@
+<div class="top text-center">
+  <div id="loading">
+    <div class="kvArea" id="loading_box">
+      <div class="img_box text-center">
+        <%= image_tag 'loading.png', alt: '', size: '300x300', class: 'fadeUp', data: { turbo: false } %>
+        <div class="text-center fadeUp">
+          <p>ちょっと待ってね~</p>
+        </div> 
+      </div>
+    </div>
+  </div>
+<h2><%=@post.user.name%>のアイコン</h2>
+  <div>
+    <p>キーワード: <%=@post.title%><br>テイスト: <%=@post.taste%></p>
+  </div>
+  <div>
+    <% if @post.image.attached? %>
+      <%= image_tag @post.image, class: 'img-fluid mx-auto', size: '500x500' %>
+    <% else %>
+      <%= image_tag "favicon.png", class: 'img-fluid mx-auto', size: '500x500' %>
+    <% end %>
+  </div>
+
+  <div class ="text-center title ">
+    <%= link_to "削除", post_path(@post), data: {turbo_method: :delete} %>
+    <%= link_to 'X Share', "https://twitter.com/share?url=https://iconmaker.onrender.com&text=アイコンを作成しました。
+      %0aキーワード: #{@title}
+      %0aテイスト: #{@taste}
+      #{@icon}",
+      title: 'Twitter',class:'btn btn-light', target: '_blank' %>
+  </div>
+  <%= link_to "戻る", posts_path , class:"btn btn-light", data: { turbo: false } %>
+</div>

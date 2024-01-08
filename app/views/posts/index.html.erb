@@ -1,5 +1,11 @@
-<% @posts.each do |post| %>
-  <span>投稿者:</span><%= post.user.name %>
-  キーワード:<%= post.title %>
-  taste:<%= post.taste %>
-<% end %>
+<div class="row">
+	<div class="col-12">
+		<div class="row">
+			<% if @posts.present? %>
+				<%= render @posts %>
+			<% else %>
+				<p>投稿がありません。</p>
+			<% end %>
+		</div>
+	</div>
+</div>
