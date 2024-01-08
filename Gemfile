@@ -8,6 +8,9 @@ gem "ruby-openai"
 
 gem 'sorcery'
 
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+
 gem 'bootstrap', '~> 5.0.2'
 #jquery
 gem 'jquery-rails'
