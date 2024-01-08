@@ -15,7 +15,7 @@
   </div>
   <div>
     <% if @post.image.attached? %>
-      <%= image_tag @post.image.variant(resize: "512x512"), class: 'img-fluid mx-auto', size: '500x500' %>
+      <%= image_tag @post.image, class: 'img-fluid mx-auto', size: '500x500' %>
     <% else %>
       <%= image_tag "favicon.png", class: 'img-fluid mx-auto', size: '500x500' %>
     <% end %>
