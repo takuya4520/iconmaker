@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :posts
   resources :users, only: %i[new create]
   # Defines the root path route ("/")
-  root to: 'posts#index'
+  root to: 'posts#new'
   get 'create_icon', to: 'posts#create_image'
 end
