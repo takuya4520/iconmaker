@@ -4,6 +4,7 @@
       <%= image_tag 'favicon.png', size: '30x30', class: "mx-2" %>
       <%= link_to 'ICON MAKER', root_path, class: 'navbar-brand text-dark text-center', data: { turbo: false } %>
     </div>
+    <%= link_to '投稿一覧', posts_path, class: 'nav-link mx-3 text-dark' %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,9 +12,6 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <%= link_to 'アイコン作成', root_path, class: 'nav-link', data: { turbo: false }  %>
-        </li>
-        <li class="nav-item">
-          <%= link_to '投稿一覧', posts_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
           <%= link_to 'ログアウト', logout_path, class: 'nav-link', data: { turbo_method: :delete } %>

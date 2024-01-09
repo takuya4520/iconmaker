@@ -9,21 +9,27 @@
       </div>
     </div>
   </div>
-  <h2>アイコンを作成しました。</h2>
+<h2>アイコンを作成しました。</h2>
   <div>
-    <p>キーワード: <%=@title%><br>テイスト: <%=@taste%></p>
+    <p>キーワード: <%=@post.title%><br>テイスト: <%=@post.taste%></p>
   </div>
   <div>
-    <%= image_tag @icon_url, class:"img-fluid mx-auto", :size =>'500x500'%>
+    <% if @post.image.attached? %>
+      <%= image_tag @icon_url, class: 'img-fluid mx-auto', size: '500x500' %>
+    <% else %>
+      <%= image_tag "favicon.png", class: 'img-fluid mx-auto', size: '500x500' %>
+    <% end %>
   </div>
 
-  <div class ="text-center title ">
-  <%= link_to 'X Share', "https://twitter.com/share?url=https://iconmaker.onrender.com&text=アイコンを作成しました。
-    %0aキーワード: #{@title}
-    %0aテイスト: #{@taste}
-    #{@icon}",
-    title: 'Twitter',class:'btn btn-light', target: '_blank' %>
+  <div class ="text-center m-2">
+    <% if current_user == @post.user %>
+      <%= link_to "削除", post_path(@post),class: "btn btn-outline-danger mx-3", data: { turbo_method: :delete } %>
+      <%= link_to 'X Share', "https://twitter.com/share?url=https://iconmaker.onrender.com&text=アイコンを作成したよ！
+        %0aキーワード: #{@post.title}
+        %0aテイスト: #{@post.taste}
+        %0a ⭐️ミニアプリweek⭐️",
+        title: 'Twitter',class:'btn btn-light mx-3', target: '_blank' %>
+    <% end %>
   </div>
-  <%= link_to "戻る", root_path , class:"btn btn-light", data: { turbo: false } %>
+  <%= link_to "戻る", posts_path , class:"btn btn-light m-2" %>
 </div>
-
