@@ -4,7 +4,7 @@
       <div class="card-body text-center">
         <%= link_to (post_path(post)), class: "btn",data: { turbo: false } do %>
           <% if post.image.attached? %>
-            <%= image_tag post.image.variant(resize: "512x512"), class: 'card-img-top img-fluid', size: '200x200'  %>
+            <%= image_tag post.image.variant(resize: "128x128"), class: 'card-img-top img-fluid', size: '200x200'  %>
           <% else %>
             <%= image_tag "favicon.png", class: 'card-img-top img-fluid', size: '200x200' %>
           <% end %>
