@@ -11,7 +11,8 @@ gem 'sorcery'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 
-gem 'bootstrap', '~> 5.0.2'
+gem 'dartsass-sprockets'
+gem 'bootstrap', '~> 5.3.2'
 #jquery
 gem 'jquery-rails'
 
@@ -83,3 +84,5 @@ end
 group :production do
   gem "pg", "~> 1.4"
 end
+
+gem "dartsass-rails", "~> 0.5.0"
