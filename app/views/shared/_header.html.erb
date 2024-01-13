@@ -1,14 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light bg-body-tertiary">
   <div class="container-fluid">
     <div class="navbar-brand d-flex align-items-center">
-      <%= image_tag 'favicon.png', size: '30x30', class: "mx-2" %>
+      <%= image_tag 'favicon.png', size: '30x30', class: "mx-1" %>
       <%= link_to 'ICON MAKER', root_path, class: 'navbar-brand text-dark', data: { turbo: false } %>
       <%= link_to '投稿一覧', posts_path, class: 'btn text-dark' %>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
           <%= link_to 'アイコン作成', root_path, class: 'btn text-dark mx-2', data: { turbo: false }  %>
